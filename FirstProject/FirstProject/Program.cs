@@ -10,10 +10,15 @@ namespace FirstProject
     {
         public static void Main(string[] args)
         {
+            PrintNoOneToTen();
             //PrintPattern1();
-           // PrintPattern2();
-            PrintPattern3();
+           //PrintPattern2();
+            //PrintPattern3();
 
+        }
+
+        private static void PrintNoOneToTen()
+        {
         }
 
         //Print Pattern
@@ -48,7 +53,7 @@ namespace FirstProject
                 }
                 for (var k = 1;k<=(2 * i)-1;k++)
                 {
-                    Console.Write("  ");
+                    Console.Write("1");
                 }
 
                 Console.WriteLine("");
@@ -71,13 +76,11 @@ namespace FirstProject
             {
                 for (var j = 1; j <= i; j++)
                 {
-                    Console.Write(" * ");
+                    Console.Write("*");
                 }
-                
 
-
+                Console.WriteLine("");
             }
-              Console.WriteLine("");
 
 
 
