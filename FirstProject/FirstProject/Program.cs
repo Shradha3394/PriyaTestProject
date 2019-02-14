@@ -12,7 +12,7 @@ namespace FirstProject
         {
           // PrintNoOneToTen();
            //PrintPattern1();
-           PrintPattern2();
+           //PrintPattern2();
            PrintPattern3();
            
 
@@ -57,29 +57,22 @@ namespace FirstProject
         //56789
         static void PrintPattern2()
         {
-            var number = 1;
+            var number = 0;
             
             for (var i = 1; i <= 3; i++)
             {
                 for (var j = 1; j <= 3 - i; j++)
                 {
-                    Console.Write("  ");
-
-                    
+                    Console.Write(" ");
                 }
+
                 for (var k = 1;k <=(2 * i)- 1;k++)
                 {
-                    
-                    Console.Write(" ");
-                    Console.Write("{0}", number = number + 1);
-                    Console.Write("");
+                    Console.Write("{0}", ++number);
 
                 }
-                    Console.WriteLine("");
+                Console.WriteLine("");
             }
-            
-
-
         }
                  
 
