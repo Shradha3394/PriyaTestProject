@@ -11,14 +11,21 @@ namespace FirstProject
         public static void Main(string[] args)
         {
             PrintNoOneToTen();
-            //PrintPattern1();
+           // PrintPattern1();
            //PrintPattern2();
-            //PrintPattern3();
+          //  PrintPattern3();
 
         }
 
         private static void PrintNoOneToTen()
         {
+            Console.Write("display number one to ten");
+            Console.WriteLine("");
+            for(var i=1;i<=10;i++)
+            {
+                Console.Write("{0}", i);
+            }
+            Console.WriteLine("");
         }
 
         //Print Pattern
