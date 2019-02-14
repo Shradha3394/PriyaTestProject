@@ -1,0 +1,11 @@
+E:\Shradha\Projects\PriyaTestProject\VSCodeTest\bin\Debug\netcoreapp2.2\VSCodeTest.deps.json
+E:\Shradha\Projects\PriyaTestProject\VSCodeTest\bin\Debug\netcoreapp2.2\VSCodeTest.runtimeconfig.json
+E:\Shradha\Projects\PriyaTestProject\VSCodeTest\bin\Debug\netcoreapp2.2\VSCodeTest.runtimeconfig.dev.json
+E:\Shradha\Projects\PriyaTestProject\VSCodeTest\bin\Debug\netcoreapp2.2\VSCodeTest.dll
+E:\Shradha\Projects\PriyaTestProject\VSCodeTest\bin\Debug\netcoreapp2.2\VSCodeTest.pdb
+E:\Shradha\Projects\PriyaTestProject\VSCodeTest\obj\Debug\netcoreapp2.2\VSCodeTest.csprojAssemblyReference.cache
+E:\Shradha\Projects\PriyaTestProject\VSCodeTest\obj\Debug\netcoreapp2.2\VSCodeTest.csproj.CoreCompileInputs.cache
+E:\Shradha\Projects\PriyaTestProject\VSCodeTest\obj\Debug\netcoreapp2.2\VSCodeTest.AssemblyInfoInputs.cache
+E:\Shradha\Projects\PriyaTestProject\VSCodeTest\obj\Debug\netcoreapp2.2\VSCodeTest.AssemblyInfo.cs
+E:\Shradha\Projects\PriyaTestProject\VSCodeTest\obj\Debug\netcoreapp2.2\VSCodeTest.dll
+E:\Shradha\Projects\PriyaTestProject\VSCodeTest\obj\Debug\netcoreapp2.2\VSCodeTest.pdb
