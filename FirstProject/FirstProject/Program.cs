@@ -10,10 +10,11 @@ namespace FirstProject
     {
         public static void Main(string[] args)
         {
-          // PrintNoOneToTen();
+           //PrintNoOneToTen();
            //PrintPattern1();
            //PrintPattern2();
-           PrintPattern3();
+          // PrintPattern3();
+             stringreverse();
            
 
         }
@@ -104,7 +105,22 @@ namespace FirstProject
 
 
         }
-        
+
+        //stringreverse
+        static void stringreverse()
+        {
+            string name = " ", revname = " ";
+            Console.WriteLine("enter the string:");
+            name = Console.ReadLine();
+            for (int i = name.length - 1; i >= 0; i--)
+            {
+                revname = revname + name[i];
+            }
+            Console.WriteLine("reverse string is:-{0}", revname);
+            Console.ReadLine();
+
+        }
+
     }
 }
     
