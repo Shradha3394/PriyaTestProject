@@ -10,9 +10,18 @@ namespace FirstProject
     {
         public static void Main(string[] args)
         {
-            // ToUpper();
-            Percentage();
+            List<Student> students = new List<Student>() { new Student("abc", 1, 2, 22), new Student("priya", 2, 1, 23), new Student("ram", 4, 3, 18) };
+            foreach (var student in students)
+            {
+                if(student.StudentAge>20)
+                   student.Display();
+
+            }
+            Console.ReadLine();
+
         }
+
+
         public static void ToUpper()
         {
             string str = "heLlo world";
@@ -68,25 +77,9 @@ namespace FirstProject
         //  1
         // 234
         //56789
-        static void PrintPattern2()
-        {
-            var number = 0;
+        //static void PrintPattern2()
 
-            for (var i = 1; i <= 3; i++)
-            {
-                for (var j = 1; j <= 3 - i; j++)
-                {
-                    Console.Write(" ");
-                }
 
-                for (var k = 1; k <= (2 * i) - 1; k++)
-                {
-                    Console.Write("{0}", ++number);
-
-                }
-                Console.WriteLine("");
-            }
-        }
 
 
 
@@ -126,38 +119,110 @@ namespace FirstProject
             int per;
             Console.Write("enter the number");
             string number = Console.ReadLine();
-            per =Convert.ToInt32(number);
-            Console.WriteLine("");
+            per = Convert.ToInt32(number);
 
-            
-            switch(per)
+
+
+            switch (per)
             {
-                case 'F':
-                    if (per <= 29)
-                        Console.WriteLine("Fail");
+                case var expression when per <= 29:
+                    Console.WriteLine("Fail");
                     break;
-                case '2':
-                    if(per>30 && per<=44)
+                case var expression when per > 30 && per <= 44:
                     Console.WriteLine("Third division");
                     break;
-                case '3':
-                      if(per>45&&per<=59)
+                case var expression when per > 45 && per <= 59:
                     Console.WriteLine("Second division");
                     break;
-                case '4':
-                    if(per>60&&per<=100)
+                case var expression when per > 60 && per <= 100:
                     Console.WriteLine("First division");
                     break;
-                  //default:
-                  // Console.WriteLine("Input wrong");
-                   // break;
+                default:
+                    Console.WriteLine("Input wrong");
+                    break;
 
             }
-                    
-                    Console.ReadLine();
+
+            Console.ReadLine();
+        }
+        static void CheckNumber()
+        {
+            int num;
+            Console.Write("enter the number");
+            string number = Console.ReadLine();
+            num = Convert.ToInt32(number);
+            switch (num)
+            {
+                case var expression when num == 0:
+                    Console.WriteLine("number is zero");
+                    break;
+                case var expression when num < 0:
+                    Console.WriteLine("number is negative");
+                    break;
+                default:
+                    Console.WriteLine("number is positive");
+                    break;
+            }
+            Console.ReadLine();
         }
     }
+
+ }
+class Student
+{
+    public void Display()
+    {
+       
+        Console.WriteLine("welcome {0}", StudentName);
+        Console.WriteLine("your id is {0}", StudentID);
+        Console.WriteLine("your rank is {0}", StudentRank);
+        Console.WriteLine("your age is {0}", StudentAge);
+
+
+    }
+    string StudentName;
+    int StudentID;
+   public  int StudentRank, StudentAge;
+    public Student(string name, int ID, int Rank, int Age)
+    {
+        StudentName = name;
+        StudentID = ID;
+        StudentRank = Rank;
+        StudentAge = Age;
+        
+    }
 }
+
+
+
+    
+      
+ 
+            
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
 
     
 
