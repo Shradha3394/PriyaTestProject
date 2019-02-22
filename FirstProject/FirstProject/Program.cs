@@ -34,20 +34,25 @@ namespace FirstProject
         {
             List<Student> students = new List<Student>() { new Student("abc", 1, 2, 22), new Student("priya", 2, 1, 23), new Student("ram", 4, 3, 18) };
 
-            foreach (var student in students)
-            {
-                // var order = new List<Student>(student.StudentName.orderBy(StudentRank => student.StudentRank) );
+           foreach (var student in students)
+           {
+               student.Display();
+           }
 
-                //if (student.StudentAge>20)
-                student.Display();
-
-                List<Teacher> teachers = new List<Teacher>() { new Teacher("english", 3500), new Teacher("math", 5500), new Teacher("english", 6600) };
+              List<Teacher> teachers = new List<Teacher>() { new Teacher("english", 3500), new Teacher("english", 5500), new Teacher("Math", 6600),new Teacher("hindi",4000),new Teacher("Math",7000) };
                 foreach (var Teacher in teachers)
                 {
+                     
                     Teacher.Display();
                 }
+               // foreach(var Teachersubject in OrderBy.Teachersubject.Math )
+                {
+                     
+                   
+
+                }
                 Console.ReadLine();
-            }
+            
         }
 
 
@@ -228,9 +233,7 @@ class Student
         StudentID = ID;
         StudentRank = Rank;
         StudentAge = Age;
-        // Teachersalary = salary;
-        // Teachersubject = subject;
-
+       
     }
 
     
