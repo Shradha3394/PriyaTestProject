@@ -17,6 +17,13 @@ namespace FirstProject
             Teachersubject = subject;
 
         }
+        public void Display()
+        {
+            Console.WriteLine("Data of Teachers {0}");
+            Console.WriteLine("subject of Teacher {0}", Teachersubject);
+            Console.WriteLine("salary of Teacher {0}", Teachersalary);
+
+        }
        
 
     }
@@ -42,15 +49,18 @@ namespace FirstProject
             {
                // var order = new List<Student>(student.StudentName.orderBy(StudentRank => student.StudentRank) );
 
-                    if (student.StudentAge>20)
-                   
+                    //if (student.StudentAge>20)
+                    student.Display();
 
-
-
-                      student.Display();
-            
-
+            List<Teacher> Teachers = new List<Teacher>() { new Teacher("english", 3500) },new Teacher("math", 5500),new Teacher("english", 6600)};
+            foreach (var Teacher in Teacher)
+            {
+                Teacher.Display();
             }
+
+
+
+        }
             Console.ReadLine();
 
         }
@@ -203,7 +213,7 @@ namespace FirstProject
     
 
  }
-class Student 
+class Student
 {
     public void Display()
     {
@@ -212,53 +222,45 @@ class Student
         Console.WriteLine("your id is {0}", StudentID);
         Console.WriteLine("your rank is {0}", StudentRank);
         Console.WriteLine("your age is {0}", StudentAge);
-        Console.WriteLine("Data of Teachers {0}");
-        Console.WriteLine("subject of Teacher {0}", Teachersubject);
-        Console.WriteLine("salary of Teacher {0}", Teachersalary);
+        //Console.WriteLine("Data of Teachers {0}");
+        // Console.WriteLine("subject of Teacher {0}", Teachersubject);
+        // Console.WriteLine("salary of Teacher {0}", Teachersalary);
     }
-        
 
 
-   
-  
-   
+
+
+
+
     public string StudentName;
     int StudentID;
-    public  int StudentRank, StudentAge;
+    public int StudentRank, StudentAge;
     public Student(string name, int ID, int Rank, int Age)
     {
         StudentName = name;
         StudentID = ID;
         StudentRank = Rank;
         StudentAge = Age;
-       // Teachersalary = salary;
-       // Teachersubject = subject;
-        
+        // Teachersalary = salary;
+        // Teachersubject = subject;
+
     }
 
-    class Person
-    {
-
-        public string Name;
-        public int id;
-        public static void Main(string[] args)
-        {
-            List<Teacher> Teachers = new List<Teacher>() { new Teacher("english", 3500) },new Teacher("math", 5500),new Teacher("english", 6600)};
-             foreach(var Teacher in Teachers)
-            {
-                 Teacher.Display();
-            }
+    
+    
+       
+}
 
             
                 
             
-        }
+        
         
  
-    }
+    
     
    
-}
+
 
 
 
