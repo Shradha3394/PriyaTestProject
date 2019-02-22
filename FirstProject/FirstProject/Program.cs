@@ -13,8 +13,14 @@ namespace FirstProject
             List<Student> students = new List<Student>() { new Student("abc", 1, 2, 22), new Student("priya", 2, 1, 23), new Student("ram", 4, 3, 18) };
             foreach (var student in students)
             {
-                if(student.StudentAge>20)
-                   student.Display();
+                var order = new List<Student>(student.StudentName.orderBy(StudentRank => student.StudentRank) );
+
+                    if (student.StudentAge>20)
+                   
+
+
+
+                      student.Display();
 
             }
             Console.ReadLine();
@@ -175,14 +181,14 @@ class Student
        
         Console.WriteLine("welcome {0}", StudentName);
         Console.WriteLine("your id is {0}", StudentID);
-        Console.WriteLine("your rank is {0}", StudentRank);
+        Console.WriteLine("your rank is {0}",StudentRank);
         Console.WriteLine("your age is {0}", StudentAge);
 
 
     }
-    string StudentName;
+     public string StudentName;
     int StudentID;
-   public  int StudentRank, StudentAge;
+    public  int StudentRank, StudentAge;
     public Student(string name, int ID, int Rank, int Age)
     {
         StudentName = name;
