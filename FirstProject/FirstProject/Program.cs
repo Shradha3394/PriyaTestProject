@@ -8,11 +8,15 @@ namespace FirstProject
 {
     class Teacher
     {
-        public int TeacherSalary{ get; set; }
-        public string TeacherSubject{ get; set; }
+        public int TeacherSalary { get; set; }
+        public string TeacherSubject { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
 
-        public Teacher(string subject, int salary)
+        public Teacher(string subject, int salary, int id, string name)
         {
+            Id = id;
+            Name = name;
             TeacherSalary = salary;
             TeacherSubject = subject;
 
@@ -40,33 +44,44 @@ namespace FirstProject
             //}
 
             List<Teacher> teachers = new List<Teacher>() {
-                new Teacher("english", 6500),
-                new Teacher("english", 5500),
-                new Teacher("Math", 6600),
-                new Teacher("hindi",4000),
-                new Teacher("Math",7000)
+                new Teacher("english", 6500, 1, "Sumit"),
+                new Teacher("english", 5500, 2, "Rahul"),
+                new Teacher("Math", 6600, 1, "Sumit"),
+                new Teacher("hindi",4000, 3, "Rohan"),
+                new Teacher("hindi",4000, 4, "Siya"),
+                new Teacher("Math",7000, 3, "Rohan")
             };
-            var orderByResult = from T in teachers
-                                orderby T.TeacherSubject, T.TeacherSalary
-                                select new { T.TeacherSubject, T.TeacherSalary };
-         
-      
-
-             var groupedResult = from T in teachers
+           
+            var groupedResult = from T in teachers
                                 group T by T.TeacherSubject;
 
-            foreach (var teachersubject in groupedResult)
+            foreach (var teachersBySubject in groupedResult)
             {
-                Console.WriteLine("Subject: {0}", teachersubject.Key);
+                Console.WriteLine("Teacher teaching {0}:", teachersBySubject.Key);
+                foreach (var item in teachersBySubject)
+                {
+                    Console.WriteLine($"Id= {item.Id} Name = {item.Name}");
+                }
             }
 
-             
-                foreach(var teachersubject in orderByResult)
-                {
-                   Console.WriteLine("TeacherData: {0}",teachersubject);
+
+
+
+
+
+
+            //var orderByResult = from T in teachers
+            //                    orderby T.TeacherSubject, T.TeacherSalary
+            //                    select new { T.TeacherSubject, T.TeacherSalary };
+
+
+
+            //foreach (var teachersubject in orderByResult)
+            //    {
+            //       Console.WriteLine("TeacherData: {0}",teachersubject);
                 
                     
-                }
+            //    }
                    
                 
                    
