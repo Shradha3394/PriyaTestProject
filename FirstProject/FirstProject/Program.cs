@@ -8,59 +8,100 @@ namespace FirstProject
 {
     class Teacher
     {
-        public int Teachersalary;
-        public string Teachersubject;
+        public int TeacherSalary{ get; set; }
+        public string TeacherSubject{ get; set; }
 
         public Teacher(string subject, int salary)
         {
-            Teachersalary = salary;
-            Teachersubject = subject;
+            TeacherSalary = salary;
+            TeacherSubject = subject;
 
         }
         public void Display()
         {
             Console.WriteLine("Data of Teachers:-");
-            Console.WriteLine("subject of Teacher:- {0}", Teachersubject);
-            Console.WriteLine("salary of Teacher:- {0}", Teachersalary);
+            Console.WriteLine("subject of Teacher:-{0}", TeacherSubject);
+            Console.WriteLine("salary of Teacher:- {0}", TeacherSalary);
 
         }
-       
+
 
     }
-   
+
     class Person
     {
         public static void Main(string[] args)
         {
-            List<Student> students = new List<Student>() { new Student("abc", 1, 2, 22), new Student("priya", 2, 1, 23), new Student("ram", 4, 3, 18) };
+            // List<Student> students = new List<Student>() { new Student("abc", 1, 2, 22), new Student("priya", 2, 1, 23), new Student("ram", 4, 3, 18) };
 
-           foreach (var student in students)
-           {
-               student.Display();
-           }
+            //foreach (var student in students)
+            //{
+            //  student.Display();
+            //}
 
-              List<Teacher> teachers = new List<Teacher>() { new Teacher("english", 3500), new Teacher("english", 5500), new Teacher("Math", 6600),new Teacher("hindi",4000),new Teacher("Math",7000) };
-                foreach (var Teacher in teachers)
+            List<Teacher> teachers = new List<Teacher>() {
+                new Teacher("english", 6500),
+                new Teacher("english", 5500),
+                new Teacher("Math", 6600),
+                new Teacher("hindi",4000),
+                new Teacher("Math",7000)
+            };
+            var orderByResult = from T in teachers
+                                orderby T.TeacherSubject, T.TeacherSalary
+                                select new { T.TeacherSubject, T.TeacherSalary };
+         
+      
+
+             var groupedResult = from T in teachers
+                                group T by T.TeacherSubject;
+
+            foreach (var teachersubject in groupedResult)
+            {
+                Console.WriteLine("Subject: {0}", teachersubject.Key);
+            }
+
+             
+                foreach(var teachersubject in orderByResult)
                 {
-                     
-                    Teacher.Display();
+                   Console.WriteLine("TeacherData: {0}",teachersubject);
+                
+                    
                 }
-               // foreach(var Teachersubject in OrderBy.Teachersubject.Math )
-                {
-                     
+                   
+                
                    
 
-                }
-                Console.ReadLine();
+                
+
+
+
             
+            Console.ReadLine();
         }
+                
+            
 
 
+             //foreach (var Teacher in teachers)
+            //{
+            // Console.WriteLine("subject of Teachers:-{0}",Teacher);
+            // Teacher.Display();
+
+           // }
+
+
+
+
+           //Console.ReadLine();
 
         
-           
 
-        
+
+
+
+
+
+
 
 
         public static void ToUpper()
@@ -206,59 +247,41 @@ namespace FirstProject
             }
             Console.ReadLine();
         }
-        }
-    
+    }
 
- }
+
+}
 class Student
 {
     public void Display()
     {
         Console.Write("Data of students:-");
-        //Console.WriteLine("welcome {0}", StudentName);
+        Console.WriteLine("welcome {0}", StudentName);
         Console.WriteLine("your id is {0}", StudentID);
         Console.WriteLine("your rank is {0}", StudentRank);
         Console.WriteLine("your age is {0}", StudentAge);
-        
-       
+
+
     }
 
 
-     public string StudentName;
-     int StudentID;
-     public int StudentRank, StudentAge;
+    public string StudentName;
+    int StudentID;
+    public int StudentRank, StudentAge;
     public Student(string name, int ID, int Rank, int Age)
     {
         StudentName = name;
         StudentID = ID;
         StudentRank = Rank;
         StudentAge = Age;
-       
+
     }
 
-    
-    
-       
+
+
+
 }
 
-            
-                
-            
-        
-        
- 
-    
-    
-   
-
-
-
-
-    
-      
- 
-            
-    
 
 
 
@@ -280,15 +303,33 @@ class Student
 
 
 
-    
-
-
-    
 
 
 
-       
-     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
