@@ -1,0 +1,11 @@
+D:\Priya\Projects\InheritanceTestProject\InheritanceTestProject\bin\Debug\netcoreapp2.1\InheritanceTestProject.deps.json
+D:\Priya\Projects\InheritanceTestProject\InheritanceTestProject\bin\Debug\netcoreapp2.1\InheritanceTestProject.runtimeconfig.json
+D:\Priya\Projects\InheritanceTestProject\InheritanceTestProject\bin\Debug\netcoreapp2.1\InheritanceTestProject.runtimeconfig.dev.json
+D:\Priya\Projects\InheritanceTestProject\InheritanceTestProject\bin\Debug\netcoreapp2.1\InheritanceTestProject.dll
+D:\Priya\Projects\InheritanceTestProject\InheritanceTestProject\bin\Debug\netcoreapp2.1\InheritanceTestProject.pdb
+D:\Priya\Projects\InheritanceTestProject\InheritanceTestProject\obj\Debug\netcoreapp2.1\InheritanceTestProject.csprojAssemblyReference.cache
+D:\Priya\Projects\InheritanceTestProject\InheritanceTestProject\obj\Debug\netcoreapp2.1\InheritanceTestProject.csproj.CoreCompileInputs.cache
+D:\Priya\Projects\InheritanceTestProject\InheritanceTestProject\obj\Debug\netcoreapp2.1\InheritanceTestProject.AssemblyInfoInputs.cache
+D:\Priya\Projects\InheritanceTestProject\InheritanceTestProject\obj\Debug\netcoreapp2.1\InheritanceTestProject.AssemblyInfo.cs
+D:\Priya\Projects\InheritanceTestProject\InheritanceTestProject\obj\Debug\netcoreapp2.1\InheritanceTestProject.dll
+D:\Priya\Projects\InheritanceTestProject\InheritanceTestProject\obj\Debug\netcoreapp2.1\InheritanceTestProject.pdb
